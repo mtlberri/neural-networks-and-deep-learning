@@ -16,6 +16,10 @@ import random
 # Third-party libraries
 import numpy as np
 
+""" For digits visualiztion """
+import matplotlib
+import matplotlib.pyplot as plt
+
 class Network(object):
 
     def __init__(self, sizes):
@@ -139,3 +143,8 @@ def sigmoid(z):
 def sigmoid_prime(z):
     """Derivative of the sigmoid function."""
     return sigmoid(z)*(1-sigmoid(z))
+
+def visualize_digit(mnist_digit):
+    image = mnist_digit.reshape(28,28)
+    plt.imshow(image, cmap='gray')
+    return 0
