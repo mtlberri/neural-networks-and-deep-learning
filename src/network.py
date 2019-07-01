@@ -145,6 +145,7 @@ def sigmoid_prime(z):
     return sigmoid(z)*(1-sigmoid(z))
 
 def visualize_digit(mnist_digit):
-    image = mnist_digit.reshape(28,28)
+    image = mnist_digit[0].reshape(28,28)
     plt.imshow(image, cmap='gray')
-    return 0
+    plt.title('label = {0}'.format(mnist_digit[1]))
+    plt.axis('off')

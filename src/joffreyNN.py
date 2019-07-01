@@ -20,3 +20,4 @@ for i in range(ROW * COLUMN):
 plt.tight_layout()  # automatic padding between subplots
 plt.savefig('images/mnist_plot.png')
 plt.show()
+
